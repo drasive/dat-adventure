@@ -31,13 +31,13 @@ public class Player {
 	// Setters
 	public void setName(String name) {
 		this.name = name; // Update local variable
-		ManagedProperties.setProperty("name", this.name);
+        playerProperties.setProperty("name", this.name);
 		ManagedProperties.store(playerProperties.getProperties(), DataFile.Player); // Save changes in .properties file
 	}
 
 	public void setTask(String task) {
 		this.task = task; // Update local variable
-		ManagedProperties.setProperty("task", this.task);
+        playerProperties.setProperty("task", this.task);
 		ManagedProperties.store(playerProperties.getProperties(), DataFile.Player); // Save changes in .properties file
 
 		DatAdventure.talkLine("Neue Aufgabe: " + task); // Output new task
@@ -45,13 +45,13 @@ public class Player {
 
 	public void setProgress(int progress) {
 		this.progress = progress; // Update local variable
-		ManagedProperties.setProperty("progress", this.progress);
+        playerProperties.setProperty("progress", this.progress);
 		ManagedProperties.store(playerProperties.getProperties(), DataFile.Player); // Save changes in .properties file
 	}
 
 	public void setLocation(int location) {
 		this.location = location; // Update local variable
-		ManagedProperties.setProperty("location", this.location);
+        playerProperties.setProperty("location", this.location);
 		ManagedProperties.store(playerProperties.getProperties(), DataFile.Player); // Save changes in .properties file
 	}
 

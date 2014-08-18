@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ManagedProperties {
 
 	// Private Static Variables
-	private static Properties properties = new Properties();
+	private Properties properties = new Properties();
 
 	// Getters
 	public Properties getProperties() {
@@ -55,11 +55,11 @@ public class ManagedProperties {
 	}
 
 	// Public Static Methods
-	public static void setProperty(String key, int value) {
+	public void setProperty(String key, int value) {
 		setProperty(key, String.valueOf(value));
 	}
 
-	public static void setProperty(String key, String value) {
+	public void setProperty(String key, String value) {
 		properties.setProperty(key, value);
 	}
 
