@@ -1,11 +1,9 @@
 package com.DimitriVranken.DatAdventure.Locations.Wurzelhausen;
 
-import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DimitriVranken.DatAdventure.DatAdventure.player;
-import static com.DimitriVranken.DatAdventure.DatAdventure.talk;
-
 import com.DimitriVranken.DatAdventure.DatAdventure;
 import com.DimitriVranken.DatAdventure.NPC;
+
+import static com.DimitriVranken.DatAdventure.DatAdventure.*;
 
 public class Wurzelhausen_Shop {
 

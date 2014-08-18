@@ -1,23 +1,15 @@
 package com.DimitriVranken.DatAdventure;
 
-import java.util.Scanner;
-
 import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital;
 import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_DischargeStation;
 import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_OfficeOfHeadPhysician;
 import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_Room;
-import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity;
-import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_Arena;
-import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBischops;
-import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBrancatos;
-import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_Shop;
-import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen;
-import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Home;
-import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_HouseOfFringles;
-import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Laboratory;
-import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Shop;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.*;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.*;
 import com.DimitriVranken.DatAdventure.Routes.Route_OneOOne;
 import com.DimitriVranken.DatAdventure.Routes.Route_TwoOOne;
+
+import java.util.Scanner;
 
 public class DatAdventure {
 

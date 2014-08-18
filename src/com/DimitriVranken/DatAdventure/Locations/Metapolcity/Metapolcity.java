@@ -1,10 +1,8 @@
 package com.DimitriVranken.DatAdventure.Locations.Metapolcity;
 
-import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DimitriVranken.DatAdventure.DatAdventure.player;
-import static com.DimitriVranken.DatAdventure.DatAdventure.talk;
-
 import com.DimitriVranken.DatAdventure.DatAdventure;
+
+import static com.DimitriVranken.DatAdventure.DatAdventure.*;
 
 public class Metapolcity {
 
