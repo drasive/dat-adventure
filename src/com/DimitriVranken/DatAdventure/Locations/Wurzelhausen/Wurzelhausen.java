@@ -20,7 +20,7 @@ public class Wurzelhausen {
 		switch (getMenuItemChoice("Wohin möchtest du gehen?", new String[] {"Wurzelhausen verlassen",
 				"Dorfladen",
 				"Zu Hause",
-				"Haus der Fringelis",
+				"Haus der Fringels",
 		"Labor"})) {
 		case 1:
 			outputLocationsToGo();
