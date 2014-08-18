@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root text="&#34;outputTalkToPerson (Route_OneOOne)&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<case text="&#34;Person mit der man sprechen möchte&#34;,&#34;Zurück zum Menü&#34;,&#34;Nina&#34;,&#34;Leon&#34;,&#34;Noriko&#34;,&#34;Roy&#34;,&#34;Roland&#34;,&#34;Giraffy&#34;,&#34; &#34;" comment="&#34;&#34;" color="c0c0c0">
+			<qCase>
+				<instruction text="&#34;Methode verlassen&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<alternative text="&#34;Spieler.Fortschritt = 3&#34;" comment="&#34;&#34;" color="0080ff">
+					<qTrue>
+						<instruction text="&#34;Nina-Puzzle Starten&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;Alter ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;Alter ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<alternative text="&#34;Spieler.Fortschritt &#60; 5&#34;" comment="&#34;&#34;" color="0080ff">
+					<qTrue>
+						<instruction text="&#34;Spieler zurückweisen&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;Spieler.Fortschritt = 5&#34;" comment="&#34;&#34;" color="0080ff">
+							<qTrue>
+								<instruction text="&#34;Noriko-Puzzle Starten&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Alter ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qCase>
+			<qCase>
+				<alternative text="&#34;Spieler.Fortschritt &#60; 4&#34;" comment="&#34;&#34;" color="0080ff">
+					<qTrue>
+						<instruction text="&#34;Spieler zurückweisen&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;Spieler.Fortschritt = 4&#34;" comment="&#34;&#34;" color="0080ff">
+							<qTrue>
+								<instruction text="&#34;Roy-Puzzle Starten&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Alter ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qCase>
+			<qCase>
+				<alternative text="&#34;Spieler.Fortschritt &#60; 6&#34;" comment="&#34;&#34;" color="0080ff">
+					<qTrue>
+						<instruction text="&#34;Spieler zurückweisen&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;Spieler.Fortschritt = 6&#34;" comment="&#34;&#34;" color="0080ff">
+							<qTrue>
+								<instruction text="&#34;Roland-Puzzle Starten&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Alter ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qCase>
+			<qCase>
+				<alternative text="&#34;Spieler.Fortschritt &#60; 8&#34;" comment="&#34;&#34;" color="0080ff">
+					<qTrue>
+						<instruction text="&#34;Giraffy-Puzzle starten&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;Kompliment ausgeben&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qCase>
+			<qCase>
+			</qCase>
+		</case>
+		<instruction text="&#34;Methode aufrufen&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+	</children>
+</root>

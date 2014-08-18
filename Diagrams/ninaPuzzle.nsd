@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root text="&#34;ninaPuzzle (Route_OneOOne)&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Taste zum beenden des Gespräches ausgeben&#34;" comment="" color="80ff80" rotated="0"></instruction>
+		<forever text="" comment="" color="ffffff">
+			<qForever>
+				<instruction text="&#34;Antwort auf Frage einlesen&#34;" comment="" color="80ff80" rotated="0"></instruction>
+				<alternative text="&#34;Antwort = \&#34;" comment="" color="c0c0c0">
+					<qTrue>
+						<instruction text="&#34;Antwort als korrekt auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;Antwort = 1.1&#34;" comment="" color="c0c0c0">
+							<qTrue>
+								<instruction text="&#34;Antwort als korrekt auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<alternative text="&#34;Antwort = 01.1&#34;" comment="" color="c0c0c0">
+									<qTrue>
+										<instruction text="&#34;Antwort als korrekt auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+									</qTrue>
+									<qFalse>
+										<alternative text="&#34;Antwort = 1.01&#34;" comment="" color="c0c0c0">
+											<qTrue>
+												<instruction text="&#34;Antwort als korrekt auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+											</qTrue>
+											<qFalse>
+												<alternative text="&#34;Antwort = 01.01&#34;" comment="" color="c0c0c0">
+													<qTrue>
+														<instruction text="&#34;Rätsel als gelöst auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+													</qTrue>
+													<qFalse>
+														<instruction text="&#34;Antwort als inkorrekt auswerten&#34;" comment="" color="80ff80" rotated="0"></instruction>
+													</qFalse>
+												</alternative>
+											</qFalse>
+										</alternative>
+									</qFalse>
+								</alternative>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qForever>
+		</forever>
+	</children>
+</root>
