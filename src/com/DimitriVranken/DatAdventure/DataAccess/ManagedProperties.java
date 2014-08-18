@@ -73,7 +73,7 @@ public class ManagedProperties {
             case Application:
                 return "Application.properties";
             case Player:
-                return "Spieler.properties";
+                return "Player.properties";
             case NPCs:
                 return "NPCs.properties";
             default:
