@@ -1,8 +1,8 @@
-package com.DatAdventure.Locations.Wurzelhausen;
+package com.DimitriVranken.DatAdventure.Locations.Wurzelhausen;
 
-import static com.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DatAdventure.DatAdventure.player;
-import static com.DatAdventure.DatAdventure.talk;
+import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
+import static com.DimitriVranken.DatAdventure.DatAdventure.player;
+import static com.DimitriVranken.DatAdventure.DatAdventure.talk;
 
 public class Wurzelhausen {
 

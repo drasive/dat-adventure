@@ -1,4 +1,4 @@
-package com.DatAdventure.DataAccess;
+package com.DimitriVranken.DatAdventure.DataAccess;
 
 public enum DataFile {
 	Player, // Stores player name, progress, etc.

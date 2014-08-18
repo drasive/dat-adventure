@@ -1,7 +1,7 @@
-package com.DatAdventure;
+package com.DimitriVranken.DatAdventure;
 
-import com.DatAdventure.DataAccess.DataFile;
-import com.DatAdventure.DataAccess.ManagedProperties;
+import com.DimitriVranken.DatAdventure.DataAccess.DataFile;
+import com.DimitriVranken.DatAdventure.DataAccess.ManagedProperties;
 
 public class Player {
 
@@ -65,9 +65,9 @@ public class Player {
 
 	// Public Methods
 	public void outputInformation() {
-		com.DatAdventure.DatAdventure.talkLine("Spieler: " + name);
-		com.DatAdventure.DatAdventure.talkLine("Ort: " + DatAdventure.convertLocationToString(location));
-		com.DatAdventure.DatAdventure.talkLine("Aufgabe: " + task);
+		com.DimitriVranken.DatAdventure.DatAdventure.talkLine("Spieler: " + name);
+		com.DimitriVranken.DatAdventure.DatAdventure.talkLine("Ort: " + DatAdventure.convertLocationToString(location));
+		com.DimitriVranken.DatAdventure.DatAdventure.talkLine("Aufgabe: " + task);
 	}
 
 }

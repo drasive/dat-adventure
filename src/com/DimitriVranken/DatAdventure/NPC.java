@@ -1,7 +1,7 @@
-package com.DatAdventure;
+package com.DimitriVranken.DatAdventure;
 
-import com.DatAdventure.DataAccess.DataFile;
-import com.DatAdventure.DataAccess.ManagedProperties;
+import com.DimitriVranken.DatAdventure.DataAccess.DataFile;
+import com.DimitriVranken.DatAdventure.DataAccess.ManagedProperties;
 
 public class NPC {
 
@@ -23,7 +23,7 @@ public class NPC {
 		ManagedProperties npcProperties = new ManagedProperties(DataFile.NPCs);
 
 		this.name = npcProperties.getString(name + ".name");
-		textOnApproach = npcProperties.getString(name + ".textOnApproach").replace("&player.name%", com.DatAdventure.DatAdventure.player.getName()); // Replace placeholders with variables
+		textOnApproach = npcProperties.getString(name + ".textOnApproach").replace("&player.name%", com.DimitriVranken.DatAdventure.DatAdventure.player.getName()); // Replace placeholders with variables
 	}
 
 	// Public Methods

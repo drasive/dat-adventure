@@ -1,12 +1,12 @@
-package com.DatAdventure.Locations.Hospital;
+package com.DimitriVranken.DatAdventure.Locations.Hospital;
 
-import static com.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DatAdventure.DatAdventure.outputNextDay;
-import static com.DatAdventure.DatAdventure.player;
-import static com.DatAdventure.DatAdventure.talkLine;
+import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
+import static com.DimitriVranken.DatAdventure.DatAdventure.outputNextDay;
+import static com.DimitriVranken.DatAdventure.DatAdventure.player;
+import static com.DimitriVranken.DatAdventure.DatAdventure.talkLine;
 
-import com.DatAdventure.DatAdventure;
-import com.DatAdventure.NPC;
+import com.DimitriVranken.DatAdventure.DatAdventure;
+import com.DimitriVranken.DatAdventure.NPC;
 
 public class Hospital_Room {
 
@@ -68,7 +68,7 @@ public class Hospital_Room {
 				"Abgabe",
 		"Büro des Chefarztes"})) { // Ask the player where to go
 		case 2:
-			com.DatAdventure.Locations.Hospital.Hospital.outputLocationsToGo(); // 
+			com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital.outputLocationsToGo(); //
 			break;
 		case 3:
 			player.setLocation(12); // Set the player to the discharge station

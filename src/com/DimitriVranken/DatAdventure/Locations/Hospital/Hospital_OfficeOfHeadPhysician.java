@@ -1,11 +1,11 @@
-package com.DatAdventure.Locations.Hospital;
+package com.DimitriVranken.DatAdventure.Locations.Hospital;
 
-import static com.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DatAdventure.DatAdventure.player;
-import static com.DatAdventure.DatAdventure.talk;
+import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
+import static com.DimitriVranken.DatAdventure.DatAdventure.player;
+import static com.DimitriVranken.DatAdventure.DatAdventure.talk;
 
-import com.DatAdventure.DatAdventure;
-import com.DatAdventure.NPC;
+import com.DimitriVranken.DatAdventure.DatAdventure;
+import com.DimitriVranken.DatAdventure.NPC;
 
 public class Hospital_OfficeOfHeadPhysician {
 
@@ -52,7 +52,7 @@ public class Hospital_OfficeOfHeadPhysician {
 				"Zimmer",
 		"Abgabe"})) {
 		case 2:
-			com.DatAdventure.Locations.Hospital.Hospital.outputLocationsToGo();
+			com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital.outputLocationsToGo();
 			break;
 		case 3:
 			player.setLocation(11);

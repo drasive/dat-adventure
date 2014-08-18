@@ -1,23 +1,23 @@
-package com.DatAdventure;
+package com.DimitriVranken.DatAdventure;
 
 import java.util.Scanner;
 
-import com.DatAdventure.Locations.Hospital.Hospital;
-import com.DatAdventure.Locations.Hospital.Hospital_DischargeStation;
-import com.DatAdventure.Locations.Hospital.Hospital_OfficeOfHeadPhysician;
-import com.DatAdventure.Locations.Hospital.Hospital_Room;
-import com.DatAdventure.Locations.Metapolcity.Metapolcity;
-import com.DatAdventure.Locations.Metapolcity.Metapolcity_Arena;
-import com.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBischops;
-import com.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBrancatos;
-import com.DatAdventure.Locations.Metapolcity.Metapolcity_Shop;
-import com.DatAdventure.Locations.Wurzelhausen.Wurzelhausen;
-import com.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Home;
-import com.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_HouseOfFringles;
-import com.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Laboratory;
-import com.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Shop;
-import com.DatAdventure.Routes.Route_OneOOne;
-import com.DatAdventure.Routes.Route_TwoOOne;
+import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital;
+import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_DischargeStation;
+import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_OfficeOfHeadPhysician;
+import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_Room;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_Arena;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBischops;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_HouseOfBrancatos;
+import com.DimitriVranken.DatAdventure.Locations.Metapolcity.Metapolcity_Shop;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Home;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_HouseOfFringles;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Laboratory;
+import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.Wurzelhausen_Shop;
+import com.DimitriVranken.DatAdventure.Routes.Route_OneOOne;
+import com.DimitriVranken.DatAdventure.Routes.Route_TwoOOne;
 
 public class DatAdventure {
 

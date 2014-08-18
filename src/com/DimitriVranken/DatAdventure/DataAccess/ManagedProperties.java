@@ -1,10 +1,10 @@
-package com.DatAdventure.DataAccess;
+package com.DimitriVranken.DatAdventure.DataAccess;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
 
-import com.DatAdventure.DatAdventure;
+import com.DimitriVranken.DatAdventure.DatAdventure;
 
 public class ManagedProperties {
 

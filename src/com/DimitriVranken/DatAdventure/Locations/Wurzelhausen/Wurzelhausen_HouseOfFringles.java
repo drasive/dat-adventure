@@ -1,11 +1,11 @@
-package com.DatAdventure.Locations.Wurzelhausen;
+package com.DimitriVranken.DatAdventure.Locations.Wurzelhausen;
 
-import static com.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DatAdventure.DatAdventure.player;
-import static com.DatAdventure.DatAdventure.talk;
+import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
+import static com.DimitriVranken.DatAdventure.DatAdventure.player;
+import static com.DimitriVranken.DatAdventure.DatAdventure.talk;
 
-import com.DatAdventure.DatAdventure;
-import com.DatAdventure.NPC;
+import com.DimitriVranken.DatAdventure.DatAdventure;
+import com.DimitriVranken.DatAdventure.NPC;
 
 public class Wurzelhausen_HouseOfFringles {
 

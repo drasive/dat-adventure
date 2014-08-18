@@ -1,10 +1,10 @@
-package com.DatAdventure.Routes;
+package com.DimitriVranken.DatAdventure.Routes;
 
-import static com.DatAdventure.DatAdventure.getMenuItemChoice;
-import static com.DatAdventure.DatAdventure.player;
+import static com.DimitriVranken.DatAdventure.DatAdventure.getMenuItemChoice;
+import static com.DimitriVranken.DatAdventure.DatAdventure.player;
 
-import com.DatAdventure.DatAdventure;
-import com.DatAdventure.NPC;
+import com.DimitriVranken.DatAdventure.DatAdventure;
+import com.DimitriVranken.DatAdventure.NPC;
 
 public class Route_TwoOOne {
 
