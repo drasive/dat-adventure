@@ -15,10 +15,13 @@ public class DatAdventure {
 	public static Player player = new Player();
 	private static Scanner scanner = new Scanner(System.in);
 
+    private static String[] args;
     private static ManagedProperties applicationProperties = new ManagedProperties(DataFile.Application);
 
 	// Public Static Methods
 	public static void main(String[] args) {
+        DatAdventure.args = args;
+
 		outputGameTitle();
 
         if (player.getProgress() == -1) {
@@ -92,11 +95,27 @@ public class DatAdventure {
 		}
 	}
 
+    private static void checkResetSavegame() {
+        DatAdventure.talk("Bist du sicher, dass du den aktuellen Spielstand löschen und das Spiel neu beginnen möchtest?" + " (y/n): ");
+        if (DatAdventure.getBooleanInput()) {
+            player.setProgress(-1);
+            DatAdventure.talkLine("Spielstand zurückgesetzt!\n\n\n", 500);
+
+            restart();
+        }
+    }
+
+
+    private static void restart() {
+        main(args);
+    }
+
 	// Private Static Output Methods
 	private static void outputGameTitle() {
 		System.out.println("-----Dat Adventure-----" +
 				"\n\nViel Spass!" +
 				"\nGib für die Hilfe \"/help\" ein" +
+                "\nGib \"/reset\" ein um den Spielstand zurückzusetzen" +
 				"\n\n-----------------------" +
 				"\n");
 	}
@@ -169,6 +188,9 @@ public class DatAdventure {
 			if (input.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
+            else if (input.equalsIgnoreCase("/reset")) {
+                checkResetSavegame();
+            }
 			else if (input.length() < minLength) {
 				talkLine("Diese(s/r) " + value + " ist etwas kurz (Mindestens " + minLength + " Zeichen)!");
 			} else if (input.length() > maxLength) {
@@ -188,6 +210,9 @@ public class DatAdventure {
 			if (stringInput.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
+            else if (stringInput.equalsIgnoreCase("/reset")) {
+                checkResetSavegame();
+            }
 			else if (isInteger(stringInput)) { // check for non-numeric parts
 				int integerInput = Integer.parseInt(stringInput);
 				if (integerInput < minValue) {
@@ -209,6 +234,9 @@ public class DatAdventure {
 			if (input.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
+            else if (input.equalsIgnoreCase("/reset")) {
+                checkResetSavegame();
+            }
 			else if (input.length() == 1) {
 				if (input.toLowerCase().charAt(0) == 'y') { // return true if first char is "y"
 					return true;
@@ -265,7 +293,7 @@ public class DatAdventure {
 		case 201:
 			return "Route 201";
 		default:
-			return "ERROR";
+			return null;
 		}
 	}
 
