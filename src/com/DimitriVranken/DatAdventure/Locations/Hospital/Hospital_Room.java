@@ -78,7 +78,7 @@ public class Hospital_Room {
 	// Private Static Introduction Methods
 	private static void startAdventure() {
 		talkLine("Willkommen bei \"Dat Adventure\"");
-		player.setName(DatAdventure.getStringInput(null, "Wie möchtest du heissen?", "Name", 3, 12)); // Ask the player for his name
+		player.setName(DatAdventure.getStringInput(null, "Wie möchtest du heissen?", "Name", 2, 35)); // Ask the player for his name
 		talkLine("Das ist ein schöner Name.");
 		talkLine("Viel Spass bei deinem Abenteuer!\n\n", 500);
 		player.setProgress(0); // Set the progress of the player to "adventure started"
