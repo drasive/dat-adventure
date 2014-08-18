@@ -101,7 +101,7 @@ public class DatAdventure {
 	private static void outputGameTitle() {
 		System.out.println("-----Dat Adventure-----" +
 				"\n\nViel Spass!" +
-				"\nGib für die Hilfe \"h\" ein" +
+				"\nGib für die Hilfe \"/help\" ein" +
 				"\n\n-----------------------" +
 				"\n");
 	}
@@ -168,7 +168,7 @@ public class DatAdventure {
 			}
 
 			String input = scanner.next();
-			if (input.equalsIgnoreCase("h")) {
+			if (input.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
 			else if (input.length() < minLength) {
@@ -187,7 +187,7 @@ public class DatAdventure {
 			talk(text + " ");
 
 			String stringInput = scanner.next();
-			if (stringInput.equalsIgnoreCase("h")) {
+			if (stringInput.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
 			else if (isInteger(stringInput)) { // check for non-numeric parts
@@ -208,7 +208,7 @@ public class DatAdventure {
 	public static Boolean getBooleanInput() {
 		while (true) { // Repeat till valid result is returned
 			String input = scanner.next();
-			if (input.equalsIgnoreCase("h")) {
+			if (input.equalsIgnoreCase("/help")) {
 				startHelp();
 			}
 			else if (input.length() == 1) {
