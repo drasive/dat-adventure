@@ -1,13 +1,11 @@
 package com.DimitriVranken.DatAdventure;
 
-import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital;
-import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_DischargeStation;
-import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_OfficeOfHeadPhysician;
-import com.DimitriVranken.DatAdventure.Locations.Hospital.Hospital_Room;
+import com.DimitriVranken.DatAdventure.DataAccess.DataFile;
+import com.DimitriVranken.DatAdventure.DataAccess.ManagedProperties;
+import com.DimitriVranken.DatAdventure.Locations.Hospital.*;
 import com.DimitriVranken.DatAdventure.Locations.Metapolcity.*;
 import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.*;
-import com.DimitriVranken.DatAdventure.Routes.Route_OneOOne;
-import com.DimitriVranken.DatAdventure.Routes.Route_TwoOOne;
+import com.DimitriVranken.DatAdventure.Routes.*;
 
 import java.util.Scanner;
 
@@ -16,6 +14,8 @@ public class DatAdventure {
 	// Private Static Variables
 	public static Player player = new Player();
 	private static Scanner scanner = new Scanner(System.in);
+
+    private static ManagedProperties applicationProperties = new ManagedProperties(DataFile.Application);
 
 	// Public Static Methods
 	public static void main(String[] args) {
@@ -119,7 +119,10 @@ public class DatAdventure {
 	public static void talk(String text, long wait) {
 		for (int charPosition = 0; charPosition < text.length(); charPosition++) { // Iterate through chars of text
 			System.out.print(text.charAt(charPosition)); // Write single char
-			sleep(60); //60 // Wait
+
+            // Wait
+            int character_delay = applicationProperties.getInteger("output_character_delay", 50);
+			sleep(character_delay);
 		}
 		sleep(wait);
 	}

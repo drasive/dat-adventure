@@ -18,27 +18,17 @@ public class ManagedProperties {
 
 	// Constructors
 	public ManagedProperties(DataFile dataFile) {
-		switch (dataFile) {
-		case Player:
-			try {
-				properties.load(new FileInputStream("Spieler.properties")); // Load "spieler.properties"
-			}
-			catch (Exception ex) {
-				DatAdventure.outputError("\"Spieler.properties\" kann nicht gelesen werden!!");
-			}
-			break;
-		case NPCs:
-			try {
-				properties.load(new FileInputStream("NPCs.properties")); // Load "NPCs.properties"
-			}
-			catch (Exception ex) {
-				ex.printStackTrace();
-				DatAdventure.outputError("\"NPCs.properties\" kann nicht gelesen werden!");
-			}
-			break;
-		default:
-			DatAdventure.outputError("Unbekannte Datei kann nicht gelesen werden"); // Unknown enumerator value
-		}
+        String dataFileName = getDataFileName(dataFile);
+        if (dataFileName == null) {
+            DatAdventure.outputError("Unbekannte Konfigurations-Datei!"); // Unknown data file
+        }
+
+        try {
+            properties.load(new FileInputStream(dataFileName)); // Load data file
+        }
+        catch (Exception ex) {
+            DatAdventure.outputError("\"" + dataFileName +"\" kann nicht gelesen werden!");
+        }
 	}
 
 	// Public Methods
@@ -64,18 +54,31 @@ public class ManagedProperties {
 	}
 
 	public static void store(Properties properties, DataFile dataFile) {
-		switch (dataFile) {
-		case Player:
-			try {
-				properties.store(new FileOutputStream("Spieler.properties"), null); // Set "Spieler.properties"
-			}
-			catch (Exception ex) {
-				DatAdventure.outputError("\"Spieler.properties\" kann nicht geschrieben werden!!");
-			}
-			break;
-		default:
-			DatAdventure.outputError("Unbekannte Datei kann nicht geschrieben werden"); // Unknown enumerator value
-		}
+        String dataFileName = getDataFileName(dataFile);
+        if (dataFileName == null) {
+            DatAdventure.outputError("Unbekannte Konfigurations-Datei!"); // Unknown data file
+        }
+
+        try {
+            properties.store(new FileOutputStream(dataFileName), null); // Set properties
+        }
+        catch (Exception ex) {
+            DatAdventure.outputError("\"" + dataFileName +"\" kann nicht geschrieben werden!");
+        }
 	}
+
+    // Private Static Methods
+    private static String getDataFileName(DataFile dataFile) {
+        switch (dataFile) {
+            case Application:
+                return "Application.properties";
+            case Player:
+                return "Spieler.properties";
+            case NPCs:
+                return "NPCs.properties";
+            default:
+                return null;
+        }
+    }
 
 }
