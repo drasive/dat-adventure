@@ -21,7 +21,10 @@ public class DatAdventure {
 	public static void main(String[] args) {
 		outputGameTitle();
 
-		if (player.getProgress() > 0) {
+        if (player.getProgress() == -1) {
+            player.setLocation(11);
+        }
+		else if (player.getProgress() > 0) {
 			player.outputInformation();
 		}
 
