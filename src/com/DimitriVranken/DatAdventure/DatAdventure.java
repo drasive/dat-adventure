@@ -11,14 +11,14 @@ import java.util.Scanner;
 
 public class DatAdventure {
 
-	// Private Static Variables
+	// Variables
 	public static Player player = new Player();
 	private static Scanner scanner = new Scanner(System.in);
 
     private static String[] args;
     private static ManagedProperties applicationProperties = new ManagedProperties(DataFile.Application);
 
-	// Public Static Methods
+	// Main
 	public static void main(String[] args) {
         DatAdventure.args = args;
 
@@ -86,35 +86,11 @@ public class DatAdventure {
 		}
 	}
 
-	// Private Static Methods
-	private static void startHelp() {
-		try {
-			Runtime.getRuntime().exec("cmd /c start winword.exe Betriebsanleitung.docx");
-		} catch (Exception e) {
-			outputError("Fehler beim starten der Hilfe!");
-		}
-	}
-
-    private static void checkResetSavegame() {
-        DatAdventure.talk("Bist du sicher, dass du den aktuellen Spielstand löschen und das Spiel neu beginnen möchtest?" + " (y/n): ");
-        if (DatAdventure.getBooleanInput()) {
-            player.setProgress(-1);
-            DatAdventure.talkLine("Spielstand zurückgesetzt!\n\n\n", 500);
-
-            restart();
-        }
-    }
-
-
-    private static void restart() {
-        main(args);
-    }
-
-	// Private Static Output Methods
+	// Output
 	private static void outputGameTitle() {
 		System.out.println("-----Dat Adventure-----" +
 				"\n\nViel Spass!" +
-				"\nGib für die Hilfe \"/help\" ein" +
+				"\nGib \"/help\" ein um die Hilfe anzuzeigen" +
                 "\nGib \"/reset\" ein um den Spielstand zurückzusetzen" +
 				"\n\n-----------------------" +
 				"\n");
@@ -161,7 +137,7 @@ public class DatAdventure {
 		talkLine("\n...\nAm nächsten Tag\n");
 	}
 
-	// Public Static Input Methods
+	// Input
 	public static int getMenuItemChoice(String text, String menuItems[]) {
 		String outputText = "\n";
 		for (int menuItemPosition = 0; menuItemPosition < menuItems.length; menuItemPosition++) { // Iterate through menu items
@@ -185,11 +161,8 @@ public class DatAdventure {
 			}
 
 			String input = scanner.next();
-			if (input.equalsIgnoreCase("/help")) {
-				startHelp();
-			}
-            else if (input.equalsIgnoreCase("/reset")) {
-                checkResetSavegame();
+            if (checkForCommand(input)) {
+                // do nothing
             }
 			else if (input.length() < minLength) {
 				talkLine("Diese(s/r) " + value + " ist etwas kurz (Mindestens " + minLength + " Zeichen)!");
@@ -207,11 +180,8 @@ public class DatAdventure {
 			talk(text + " ");
 
 			String stringInput = scanner.next();
-			if (stringInput.equalsIgnoreCase("/help")) {
-				startHelp();
-			}
-            else if (stringInput.equalsIgnoreCase("/reset")) {
-                checkResetSavegame();
+            if (checkForCommand(stringInput)) {
+                // do nothing
             }
 			else if (isInteger(stringInput)) { // check for non-numeric parts
 				int integerInput = Integer.parseInt(stringInput);
@@ -231,17 +201,14 @@ public class DatAdventure {
 	public static Boolean getBooleanInput() {
 		while (true) { // Repeat till valid result is returned
 			String input = scanner.next();
-			if (input.equalsIgnoreCase("/help")) {
-				startHelp();
-			}
-            else if (input.equalsIgnoreCase("/reset")) {
-                checkResetSavegame();
+			if (checkForCommand(input)) {
+                // do nothing
             }
-			else if (input.length() == 1) {
-				if (input.toLowerCase().charAt(0) == 'y') { // return true if first char is "y"
+			else {
+				if (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) { // return true if "y" or "yes"
 					return true;
 				}
-				else if (input.toLowerCase().charAt(0) == 'n') { // return false if first char is "n"
+				else if (input.equalsIgnoreCase("n") || input.equalsIgnoreCase("no")) { // return false if "n" or "no"
 					return false;
 				}
 			}
@@ -249,7 +216,21 @@ public class DatAdventure {
 		}
 	}
 
-	//Other Methods
+
+    private static boolean checkForCommand(String input) {
+        if (input.equalsIgnoreCase("/help")) {
+            startHelp();
+            return true;
+        }
+        else if (input.equalsIgnoreCase("/reset")) {
+            checkResetSavegame();
+            return true;
+        }
+
+        return false;
+    }
+
+	// Helpers
 	private static void sleep(long duration) {
 		try {
 			Thread.sleep(duration);
@@ -305,5 +286,29 @@ public class DatAdventure {
 		}
 		return true; // return true if parsing was successful
 	}
+
+
+    private static void checkResetSavegame() {
+        DatAdventure.talk("Bist du sicher, dass du den aktuellen Spielstand löschen und das Spiel neu beginnen möchtest?" + " (y/n): ");
+        if (DatAdventure.getBooleanInput()) {
+            player.setProgress(-1);
+            DatAdventure.talkLine("Spielstand zurückgesetzt!\n\n\n", 500);
+
+            restart();
+        }
+    }
+
+    private static void restart() {
+        main(args);
+    }
+
+
+    private static void startHelp() {
+        try {
+            Runtime.getRuntime().exec("cmd /c start winword.exe Betriebsanleitung.docx");
+        } catch (Exception e) {
+            outputError("Fehler beim starten der Hilfe!");
+        }
+    }
 
 }
