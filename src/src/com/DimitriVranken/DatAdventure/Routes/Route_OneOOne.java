@@ -173,22 +173,17 @@ public class Route_OneOOne {
 			String input = DatAdventure.getStringInput(noriko,
 					"Ludwig und Klaus haben 20 Euro und sollen diese so unter sich aufteilen, dass Ludwig einen Euro mehr bekommt als Klaus. Wie viel Geld bekommt Ludwig (##.##)?",
 					"Mengenangabe", 1, 5);
+
 			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
-			else if (input.equalsIgnoreCase("10,5")) {
+
+            input = input.replace(',', '.');
+            if (input.equalsIgnoreCase("10.5")) {
 				norikoPuzzleSolved();
 				break;
 			}
-			else if (input.equalsIgnoreCase("10.5")) {
-				norikoPuzzleSolved();
-				break;
-			}
-			else if (input.equalsIgnoreCase("10,50")) {
-				norikoPuzzleSolved();
-				break;
-			}
-			else if (input.equalsIgnoreCase("10,50")) {
+			else if (input.equalsIgnoreCase("10.50")) {
 				norikoPuzzleSolved();
 				break;
 			}
