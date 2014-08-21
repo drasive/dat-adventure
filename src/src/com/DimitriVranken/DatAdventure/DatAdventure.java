@@ -8,6 +8,7 @@ import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.*;
 import com.DimitriVranken.DatAdventure.Routes.*;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -90,10 +91,11 @@ public class DatAdventure {
 
 	// Output
 	private static void outputGameTitle() {
-		System.out.println("-----Dat Adventure-----" +
+		System.out.println("----- Dat Adventure -----" +
 				"\n\nViel Spass!" +
-				"\nGib \"/help\" ein um die Hilfe anzuzeigen" +
-                "\nGib \"/reset\" ein um den Spielstand zurückzusetzen" +
+				"\nGib \"/help\" ein, um die Hilfe zu öffnen." +
+                "\nGib \"/walkthrough\" ein, um die Komplettlösung zu öffnen." +
+                "\nGib \"/reset\" ein, um den Spielstand zurückzusetzen." +
 				"\n\n-----------------------" +
 				"\n");
 	}
@@ -221,7 +223,11 @@ public class DatAdventure {
 
     private static boolean checkForCommand(String input) {
         if (input.equalsIgnoreCase("/help")) {
-            startHelp();
+            openHelp();
+            return true;
+        }
+        else if (input.equalsIgnoreCase("/walkthrough")) {
+            openWalkthrough();
             return true;
         }
         else if (input.equalsIgnoreCase("/reset")) {
@@ -305,13 +311,30 @@ public class DatAdventure {
     }
 
 
-    private static void startHelp() {
-        if (!openFile("docs/Dat Adventure.pdf")) {
-            System.err.println("Fehler beim starten der Hilfe!");
+    private static void openHelp() {
+        if (!openFile("../docs/Dat Adventure.pdf")) {
+            System.err.println("Fehler beim öffnen der Hilfe!");
         }
     }
 
+    private static void openWalkthrough() {
+        if (!openFile("../docs/Walkthrough.pdf")) {
+            System.err.println("Fehler beim öffnen der Komplettlösung!");
+        }
+    }
+
+
+    private static boolean doesFileExists(String filePath) {
+        File file = new File(filePath);
+        return file.exists();
+    }
+
     private static boolean openFile(String filePath) {
+        if (!doesFileExists(filePath)) {
+            System.err.println("Die Datei \"" + filePath + "\" existiert nicht!");
+            return false;
+        }
+
         try {
             Desktop.getDesktop().open(new java.io.File(filePath));
         } catch (IOException e) {
