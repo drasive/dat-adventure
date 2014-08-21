@@ -128,13 +128,13 @@ public class Route_OneOOne {
 
 	//Puzzles
 	private static void ninaPuzzle() {
-		DatAdventure.outputLine("\n\"\\\" drücken um Gespräch zu beenden");
+		DatAdventure.outputLine("\n\"/exit\" eingeben um Gespräch zu beenden");
 
 		while (true) {
 			String input = DatAdventure.getStringInput(nina,
 					"Vorgestern war Markus noch 15, nächstes Jahr wird er schon 18. Wann hat er Geburtstag (dd.MM)?",
 					"Datum", 1, 5);
-			if (input.equalsIgnoreCase("\\")) {
+			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
 			else if (input.equalsIgnoreCase("1.1")) {
@@ -167,13 +167,13 @@ public class Route_OneOOne {
 	}
 
 	private static void norikoPuzzle() {
-		DatAdventure.outputLine("\n\"\\\" eingeben um Gespräch zu beenden");
+		DatAdventure.outputLine("\n\"/exit\" eingeben um Gespräch zu beenden");
 
 		while (true) {
 			String input = DatAdventure.getStringInput(noriko,
 					"Ludwig und Klaus haben 20 Euro und sollen diese so unter sich aufteilen, dass Ludwig einen Euro mehr bekommt als Klaus. Wie viel Geld bekommt Ludwig (##.##)?",
 					"Mengenangabe", 1, 5);
-			if (input.equalsIgnoreCase("\\")) {
+			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
 			else if (input.equalsIgnoreCase("10,5")) {
@@ -206,13 +206,13 @@ public class Route_OneOOne {
 	}
 
 	private static void royPuzzle() {
-		DatAdventure.outputLine("\n\"\\\" drücken um Gespräch zu beenden");
+		DatAdventure.outputLine("\n\"/exit\" eingeben um Gespräch zu beenden");
 
 		while (true) {
 			String input = DatAdventure.getStringInput(roy,
 					"Harte Schale, leckerer Kern, wer mich knackt, der isst mich gern (Oberbegriff)?",
 					"Wort", 1, 10);
-			if (input.equalsIgnoreCase("\\")) {
+			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
 			else if (input.equalsIgnoreCase("Nuss")) {
@@ -237,13 +237,13 @@ public class Route_OneOOne {
 	}
 
 	private static void rolandPuzzle() {
-		DatAdventure.outputLine("\n\"\\\" drücken um Gespräch zu beenden");
+		DatAdventure.outputLine("\n\"/exit\" eingeben um Gespräch zu beenden");
 
 		while (true) {
 			String input = DatAdventure.getStringInput(roland,
 					"Was kommt einmal in jeder Minute, zweimal in jedem Moment aber nie in tausend Jahren vor (1 Buchstabe)?",
 					"Buchstabe", 1, 1);
-			if (input.equalsIgnoreCase("\\")) {
+			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
 			else if (input.equalsIgnoreCase("M")) {
@@ -264,13 +264,13 @@ public class Route_OneOOne {
 	}
 
 	private static void giraffyPuzzle() {
-		DatAdventure.talkLine("\n\"\\\" drücken um Gespräch zu beenden");
+		DatAdventure.talkLine("\n\"/exit\" eingeben um Gespräch zu beenden");
 
 		while (true) {
 			String input = DatAdventure.getStringInput(giraffy,
 					"Wie alt sind alle Leute ausser mir auf dieser Route zusammen (Jahre)?",
 					"Alter", 1, 3);
-			if (input.equalsIgnoreCase("\\")) {
+			if (input.equalsIgnoreCase("/exit")) {
 				break;
 			}
 			else if (input.equalsIgnoreCase("127")) {
