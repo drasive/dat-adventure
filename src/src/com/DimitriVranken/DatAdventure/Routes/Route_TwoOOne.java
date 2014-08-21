@@ -42,7 +42,8 @@ public class Route_TwoOOne {
 		case 2:
 			dimitri.talkTo();
 			player.setProgress(12);
-		}
+            DatAdventure.outputLine("\nGib \"/reset\" ein, um deinen Spielstand zurückzusetzen und von vorne zu beginnen.");
+        }
 		outputTalkToPerson();
 	}
 

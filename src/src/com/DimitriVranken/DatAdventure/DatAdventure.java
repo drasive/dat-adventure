@@ -91,7 +91,7 @@ public class DatAdventure {
 
 	// Output
 	private static void outputGameTitle() {
-		System.out.println("----- Dat Adventure -----" +
+		outputLine("----- Dat Adventure -----" +
 				"\n\nViel Spass!" +
 				"\nGib \"/help\" ein, um die Hilfe zu öffnen." +
                 "\nGib \"/walkthrough\" ein, um die Komplettlösung zu öffnen." +
