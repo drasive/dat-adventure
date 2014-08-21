@@ -7,6 +7,8 @@ import com.DimitriVranken.DatAdventure.Locations.Metapolcity.*;
 import com.DimitriVranken.DatAdventure.Locations.Wurzelhausen.*;
 import com.DimitriVranken.DatAdventure.Routes.*;
 
+import java.awt.*;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class DatAdventure {
@@ -304,11 +306,19 @@ public class DatAdventure {
 
 
     private static void startHelp() {
-        try {
-            Runtime.getRuntime().exec("cmd /c start winword.exe Betriebsanleitung.docx");
-        } catch (Exception e) {
-            outputError("Fehler beim starten der Hilfe!");
+        if (!openFile("docs/Dat Adventure.pdf")) {
+            System.err.println("Fehler beim starten der Hilfe!");
         }
+    }
+
+    private static boolean openFile(String filePath) {
+        try {
+            Desktop.getDesktop().open(new java.io.File(filePath));
+        } catch (IOException e) {
+            return false;
+        }
+
+        return true;
     }
 
 }
