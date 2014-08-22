@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="Executables">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/resources/Dat Adventure.bat" />
+    </root>
+  </artifact>
+</component>
