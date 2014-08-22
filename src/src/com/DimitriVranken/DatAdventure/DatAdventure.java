@@ -10,6 +10,7 @@ import com.DimitriVranken.DatAdventure.Routes.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.text.Normalizer;
 import java.util.Scanner;
 
 public class DatAdventure {
@@ -126,7 +127,7 @@ public class DatAdventure {
 
 	public static void talk(String text, long wait) {
 		for (int charPosition = 0; charPosition < text.length(); charPosition++) { // Iterate through chars of text
-			System.out.print(text.charAt(charPosition)); // Write single char
+			output(text.charAt(charPosition)); // Write single char
 
             // Wait
             int character_delay = applicationProperties.getInteger("output_character_delay", 50);
@@ -140,8 +141,19 @@ public class DatAdventure {
 	}
 
 	public static void output(String text) {
-		System.out.print(text);
+        String output = text;
+
+        if (applicationProperties.getBoolean("ascii_mode", true)) {
+            output = Normalizer.normalize(output, Normalizer.Form.NFD);
+            output = output.replaceAll("[^\\x00-\\x7F]", "");
+        }
+
+		System.out.print(output);
 	}
+
+    public static void output(char c) {
+        output(String.valueOf(c));
+    }
 
 	public static void outputNextDay() {
 		talkLine("\n...\nAm nächsten Tag\n");
