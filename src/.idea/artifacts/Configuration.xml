@@ -2,9 +2,9 @@
   <artifact name="Configuration">
     <output-path>$PROJECT_DIR$/out/artifacts/Configuration</output-path>
     <root id="root">
-      <element id="file-copy" path="$PROJECT_DIR$/resources/Application.properties" />
-      <element id="file-copy" path="$PROJECT_DIR$/resources/NPCs.properties" />
-      <element id="file-copy" path="$PROJECT_DIR$/resources/Player.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/configuration/Application.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/configuration/NPCs.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/configuration/Player.properties" />
     </root>
   </artifact>
 </component>
