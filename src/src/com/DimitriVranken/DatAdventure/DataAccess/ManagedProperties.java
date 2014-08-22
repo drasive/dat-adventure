@@ -71,11 +71,11 @@ public class ManagedProperties {
     private static String getDataFileName(DataFile dataFile) {
         switch (dataFile) {
             case Application:
-                return "Application.properties";
+                return "configuration/Application.properties";
             case Player:
-                return "Player.properties";
+                return "configuration/Player.properties";
             case NPCs:
-                return "NPCs.properties";
+                return "configuration/NPCs.properties";
             default:
                 return null;
         }
