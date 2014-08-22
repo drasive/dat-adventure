@@ -93,13 +93,16 @@ public class DatAdventure {
 	private static void outputSessionHeader() {
 		outputLine("----- Dat Adventure -----" +
                 "\n\nViel Spass!" +
-                "\nDieses Spiel speichert automatisch." +
                 "\n" +
 				"\nGib \"/help\" ein, um die Hilfe zu öffnen." +
                 "\nGib \"/exit\" ein, um das Spiel zu beenden." +
                 "\nGib \"/walkthrough\" ein, um die Komplettlösung zu öffnen." +
                 "\nGib \"/reset\" ein, um den Spielstand zurückzusetzen." +
-				"\n\n-----------------------" +
+                "\n" +
+                "\nDieses Spiel speichert automatisch." +
+                "\nQuellcode verfügbar auf https://www.github.com/drasive/dat-adventure." +
+                "\n" +
+				"\n-----------------------" +
 				"\n");
 	}
 
