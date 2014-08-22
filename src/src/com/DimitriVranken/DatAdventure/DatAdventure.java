@@ -130,7 +130,7 @@ public class DatAdventure {
 			output(text.charAt(charPosition)); // Write single char
 
             // Wait
-            int character_delay = 50;
+            int character_delay = applicationProperties.getInteger("character_delay", 40);
             if (applicationProperties.getBoolean("debug_mode", false)) {
                 character_delay = 3;
             }
