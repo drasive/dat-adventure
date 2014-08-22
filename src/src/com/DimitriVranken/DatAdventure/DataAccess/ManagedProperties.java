@@ -8,10 +8,9 @@ import java.util.Properties;
 
 public class ManagedProperties {
 
-	// Private Static Variables
+	// Variables and getters
 	private Properties properties = new Properties();
 
-	// Getters
 	public Properties getProperties() {
 		return properties;
 	}
@@ -31,7 +30,7 @@ public class ManagedProperties {
         }
 	}
 
-	// Public Methods
+	// Getting values
 	public String getString(String key) {
 		return getString(key, "");
 	}
@@ -40,11 +39,28 @@ public class ManagedProperties {
 		return properties.getProperty(key, defaultValue);
 	}
 
+
 	public Integer getInteger(String key, Integer defaultValue) {
 		return Integer.parseInt(getString(key, defaultValue.toString()));
 	}
 
-	// Public Static Methods
+
+    public boolean getBoolean(String key) {
+        return getBoolean(key, false);
+    }
+
+    public boolean getBoolean(String key, boolean defaultValue) {
+        String propertyString = getString(key, "");
+
+        if (propertyString == "") {
+            return defaultValue;
+        }
+        else {
+            return Boolean.parseBoolean(propertyString);
+        }
+    }
+
+	// Setting values
 	public void setProperty(String key, int value) {
 		setProperty(key, String.valueOf(value));
 	}
@@ -52,6 +68,7 @@ public class ManagedProperties {
 	public void setProperty(String key, String value) {
 		properties.setProperty(key, value);
 	}
+
 
 	public static void store(Properties properties, DataFile dataFile) {
         String dataFileName = getDataFileName(dataFile);
@@ -67,7 +84,7 @@ public class ManagedProperties {
         }
 	}
 
-    // Private Static Methods
+    // Helpers
     private static String getDataFileName(DataFile dataFile) {
         switch (dataFile) {
             case Application:
