@@ -2,9 +2,9 @@
   <artifact name="Properties">
     <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
     <root id="root">
-      <element id="file-copy" path="$PROJECT_DIR$/Application.properties" />
-      <element id="file-copy" path="$PROJECT_DIR$/NPCs.properties" />
-      <element id="file-copy" path="$PROJECT_DIR$/Player.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/Application.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/NPCs.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/Player.properties" />
     </root>
   </artifact>
 </component>
