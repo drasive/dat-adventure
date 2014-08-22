@@ -25,7 +25,7 @@ public class DatAdventure {
 	public static void main(String[] args) {
         DatAdventure.args = args;
 
-		outputGameTitle();
+		outputSessionHeader();
 
         if (player.getProgress() == -1) {
             player.setLocation(11);
@@ -90,10 +90,13 @@ public class DatAdventure {
 	}
 
 	// Output
-	private static void outputGameTitle() {
+	private static void outputSessionHeader() {
 		outputLine("----- Dat Adventure -----" +
-				"\n\nViel Spass!" +
+                "\n\nViel Spass!" +
+                "\nDieses Spiel speichert automatisch." +
+                "\n" +
 				"\nGib \"/help\" ein, um die Hilfe zu öffnen." +
+                "\nGib \"/exit\" ein, um das Spiel zu beenden." +
                 "\nGib \"/walkthrough\" ein, um die Komplettlösung zu öffnen." +
                 "\nGib \"/reset\" ein, um den Spielstand zurückzusetzen." +
 				"\n\n-----------------------" +
@@ -225,6 +228,9 @@ public class DatAdventure {
         if (input.equalsIgnoreCase("/help")) {
             openHelp();
             return true;
+        }
+        else if (input.equalsIgnoreCase("/exit")) {
+            System.exit(0);
         }
         else if (input.equalsIgnoreCase("/walkthrough")) {
             openWalkthrough();
