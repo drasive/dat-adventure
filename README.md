@@ -14,7 +14,7 @@ This was a school project for module #103 at the [GIB Muttenz](http://www.gibm.c
 - Contains loads of grammar mistakes
 
 ## Installation
-Download the latest [release](https://github.com/drasive/dat-adventure/releases/) and put the extracted files somewhere on you computer. To run the game, just execute the appropriate Launcher (Windows or Linux).  
+Download the latest [release](https://github.com/drasive/dat-adventure/releases/) and put the extracted files somewhere on you computer. To run the game, just execute the appropriate launcher (Windows or Linux).  
 The Java Runtime Environment (JRE) 5.0 or a compatible later version has to be installed on said computer.
 
 ## Documentation
