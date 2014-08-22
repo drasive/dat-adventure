@@ -2,8 +2,7 @@
   <artifact name="Launchers">
     <output-path>$PROJECT_DIR$/out/artifacts</output-path>
     <root id="root">
-      <element id="file-copy" path="$PROJECT_DIR$/launchers/Launcher (Windows).bat" />
-      <element id="file-copy" path="$PROJECT_DIR$/launchers/Launcher (Linux).sh" />
+      <element id="dir-copy" path="$PROJECT_DIR$/launchers" />
     </root>
   </artifact>
 </component>

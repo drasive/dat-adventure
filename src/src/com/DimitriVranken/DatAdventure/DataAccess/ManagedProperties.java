@@ -75,7 +75,7 @@ public class ManagedProperties {
             case Player:
                 return "configuration/Player.properties";
             case NPCs:
-                return "configuration/NPCs.properties";
+                return "resources/NPCs.properties";
             default:
                 return null;
         }
