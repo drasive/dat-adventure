@@ -15,8 +15,8 @@ hs_err_pid*
 
 
 ### Project
-**/src/resources/Application.properties
-**/src/resources/Player.properties
+**/Application.properties
+**/Player.properties
 
 
 
