@@ -260,7 +260,7 @@ public class DatAdventure {
 		case 20:
 			return "Wurzelhausen";
 		case 21:
-			return "Wurzelhausen, Pokecenter";
+			return "Wurzelhausen, Dorfladen";
 		case 22:
 			return "Wurzelhausen, Zu Hause";
 		case 23:

@@ -9,7 +9,7 @@ public class Wurzelhausen_Shop {
 
 	//Variables
 	private static NPC employee = new NPC("wurzelhausen_shop_employee");
-	private static NPC pokemonTrainer = new NPC("wurzelhausen_shop_man");
+	private static NPC man = new NPC("wurzelhausen_shop_man");
 
 	//Main Methods
 	public static void enter() {
@@ -44,7 +44,7 @@ public class Wurzelhausen_Shop {
 			employee.talkTo();
 			break;
 		case 3:
-			pokemonTrainer.talkTo();
+			man.talkTo();
 		}
 		outputTalkToPerson();
 	}
