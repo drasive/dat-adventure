@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts</output-path>
     <root id="archive" name="Dat Adventure.jar">
       <element id="module-output" name="Dat Adventure" />
-      <element id="artifact" artifact-name="Properties" />
+      <element id="artifact" artifact-name="Configuration" />
     </root>
   </artifact>
 </component>
