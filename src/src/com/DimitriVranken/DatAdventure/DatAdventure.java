@@ -337,13 +337,13 @@ public class DatAdventure {
 
 
     private static void openHelp() {
-        if (!openFile("../docs/Dat Adventure.pdf")) {
+        if (!openFile("docs/Dat Adventure.pdf")) {
             System.err.println("Fehler beim öffnen der Hilfe!");
         }
     }
 
     private static void openWalkthrough() {
-        if (!openFile("../docs/Walkthrough.pdf")) {
+        if (!openFile("docs/Walkthrough.pdf")) {
             System.err.println("Fehler beim öffnen der Komplettlösung!");
         }
     }
