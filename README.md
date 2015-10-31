@@ -33,5 +33,5 @@ The project is developed using IntelliJ IDEA 13. This tool is neither a requirem
 ![Dialogs](/docs/_source/dialogs.png "Dialogs")
 
 ## License
-The files in this repository are released under the MIT License.  
+The files in this repository are released under the GPLv3 License.  
 Please see the [license file](LICENSE) for further information.
